@@ -1,0 +1,474 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    box-sizing:border-box;
+}
+html{
+   scroll-behavior: smooth; 
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 95vh;
+    background-image: url('./images/background.png.jpeg');
+    background-size: 700px 900px;
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+.container{
+    padding: 20px 100px;
+}
+
+/* links will be side by side */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 300px; /* Adjust width as needed */
+    height: 30vh; /* Maintains aspect ratio */
+    margin-right: 20px;
+}
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+}
+
+/* for removing underlines under links  */ 
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size:18 px;
+    position: relative;
+    padding: 10px 0;
+
+}
+
+nav ul li a::after{
+    content: '';
+    width:0;  /* it is for not displaying(or)enabling the line under the link componenets */
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+   margin-top: 10%; 
+   font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/* about */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+    margin-top: 20px; /* Remove any unintended margin */
+    padding-top: 30px; /* Ensure no padding at the top */
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+     height: 700px; 
+}
+
+.about-col-2{
+    flex-basis: 60%;
+    font-size: 20px;
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+} 
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* services */
+#services{
+    padding: 30px 0;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover{
+    background-color: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* portfolio */
+#portfolio{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0; /* height is 0 because the content in image is hidden whenever we increase height then only it is visible */
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+   transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #ff004f;
+}
+
+/* contact */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: #ff004f;
+    transition: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px ;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #ff004f;
+}
+
+/* css for small screens */
+nav .fas{
+     display: none;  /* it is for hiddening the icons cross and menu */
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-size: cover; /* Cover the entire container */
+        background-position: center center; /* Center the image */
+        height: 100vh; /* Full viewport height */
+        display: flex; /* Use Flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: flex-start; /* Align content to the top */
+        align-items: left left;
+        padding: 20px;
+        position: relative;
+    }
+
+     /* Kalyani logo adjustments */
+     .logo {
+        font-size: 2px; /* Decrease the logo size */
+        color: white; /* Adjust the color for visibility */
+        position: absolute;
+        top: 2px; /* Align to top */
+        left: 30px; /* Align to left */
+        z-index: 3;
+        width: 100px;
+        height:100px;
+    }
+
+    .header-text{
+        text-align: left; /* Align text to the left */
+        color: white; /* Ensure the text is visible against the background */
+        width: auto; /* Restrict width for better layout */
+        z-index: 2; /* Ensure it appears above the background image */
+        margin-top: 10px; /* Add spacing from the top */
+        margin-left: 20px; /* Add some padding from the left edge */
+    }
+    .header-text h1{
+        font-size: 24px;
+        margin-bottom: 10px; /* Add spacing between text lines */
+        text-align: left;
+    }
+    .header-text p {
+        font-size: 16px; /* Adjust paragraph font size */
+        margin-bottom: 10px; /* Add spacing between lines */
+        text-align: left;
+    }
+
+    /* Menu icon styling */
+    nav .fas{
+        display: block; /* Ensure the icon is visible */
+        font-size: 25px; /* Adjust icon size */
+        position: absolute; /* Position relative to the header */
+        top: 20px; /* Move closer to the top */
+        right: 30px; /* Align the icon to the left side */
+        cursor: pointer; /* Change cursor for interactivity */
+        z-index: 3; /* Ensure it appears above other elements */
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px; /* It is -200px because to hide the menu content for functionality we can write javascript */
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 15px;
+        text-align: center; /* Center-align menu text */
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about col-1, .about col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1 img{
+        width: 400%;
+        border-radius: 15px;
+         height: 200px; 
+    } 
+    .about-col-1{
+        margin-bottom: 30px;
+    } 
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contavt-right{
+        flex-basis: 100%;
+    }
+}
+
+#msg{
+    color: #61b761;
+    margin-top: -40px;
+    display: block;
+}

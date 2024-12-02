@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv-"X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b12df4542a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/logo.png (2).jpeg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header"> Home </a></li>  
+                    <li><a href="#about"> About </a></li> 
+                    <li><a href="#services"> Services </a></li> 
+                    <li><a href="#portfolio"> Portfolio </a></li> 
+                    <li><a href="#contact"> Contact </a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Java FullStack Developer</p>
+                <h1>Hi, I'm <span>Kalyani</span><br> From AndhraPradesh</h1>
+            </div>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+               <div class="about-col-1">  <!--here we have 2 columns,co1-1(left col)we are adding image and right col(col-2) we are adding some text -->
+                  <img src="images/user.png (2).jpeg">
+                </div>
+               <div class="about-col-2" >
+                  <h1 class="sub-title">About Me</h1>
+                  <p>A highly motivated and detail-oriented B. Tech (CSE) graduate with specialized training as a Java Full 
+                    Stack Developer. Proficient in Core Java, Advanced Java, HTML, CSS, JavaScript, SQL, Angular, and Spring 
+                    Boot. Aspiring to start a dynamic career in the IT industry, contribute to innovative projects, and 
+                    continuously expand my technical expertise.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills',event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('education',event)">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                     <ul>
+                        <li><span>Programming Languages:</span><br>Core Java, Advanced Java (oops, Exception handling, Collection API, Multithreading)</li>
+                        <li><span>Front-end Technologies:</span><br>HTML, CSS, JavaScript, Angular</li>
+                        <li><span>Database Management:</span><br>SQL -DDL, DML, DQL Commands, Constraints, Mappings and joins</li>
+                        <li><span>Frameworks:</span><br>Spring Boot (Rest Webservices, Spring Data Jpa),Angular</li>
+                    </ul>
+            </div>
+                   <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-2024</span><br>B.Tech from SVIT Andhrapradhesh</li>
+                        <li><span>2018-2020</span><br>Intermediate from Sv Junior college Andhrapradesh</li>
+                        <li><span>2017-2018</span><br>SSC from MPL Girls High School Andhrapradesh</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- services -->
+ <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Front-end Development</h2>
+                    <p>As a Java Full-Stack Developer, I have a strong foundation in front-end technologies like HTML, CSS, JavaScript, and Angular. I am proficient in creating responsive, interactive, and user-friendly interfaces, ensuring a smooth user experience across different devices and browsers.</p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Back-end Development</h2>
+                    <p>I have hands-on experience with Core Java and Advanced Java concepts such as OOPs, Exception Handling, Collection API, and Multithreading, which help in building robust and efficient backend systems. I also work with databases using SQL for managing data, including DDL, DML, and DQL commands, as well as optimizing queries through joins and constraints. Additionally, I have worked with frameworks like Spring Boot to build secure and scalable RESTful APIs and manage database interactions via Spring Data JPA.</p>
+                    <a href="#">Learn more</a>
+            </div>
+    </div>
+  </div>
+</div>
+
+<!-- portfolio -->
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/project-1.png.jpeg">
+                <div class="layer">
+                    <h3 class="sub-title">Project-1</h3>
+                    <h3>Employee Management System</h3>
+                    <p>Developed a web-based Employee Management System to streamline employee data management. The application supports full CRUD operations, allowing users to: Add, update, delete, and view employee records.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/project-2.png (2).jpeg">
+                <div class="layer">
+                    <h3 class="sub-title">Project-2</h3>
+                    <h3>My Portfolio Website </h3>
+                    <p>A professional portfolio website designed to showcase my skills, projects, and career journey as a Java Full Stack Developer. This website serves as a comprehensive representation of my technical expertise and accomplishments. It features:Home,About,Services,Portfolio,Contact</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+        </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+ </div>
+ </div>
+
+ <!-- contact -->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+               <h1 class="sub-title">Contact Me</h1>
+               <p><i class="fas fa-paper-plane"></i> madana.kalyani02@gmail.com</p>
+               <p><i class="fas fa-phone-square-alt"></i> 8328250277</p>
+               <div class="social-icons">
+                 <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                 <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+               </div>
+               <a href="images/Kalyani_CV.pdf" download class="btn btn2">Download CV</a>
+               </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit"  class="btn btn-2">Submit</button>
+                </form>
+                <span id="msg"></span>
+        </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+<script>
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname,event){
+        for(var tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(var tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+    var sidemenu=document.getElementById("sidemenu");
+    var menuIcon = document.querySelector(".fa-bars");
+    var closeIcon = document.querySelector(".fa-times");
+
+    function openmenu(){
+        sidemenu.style.right="0";  <!--whenever right is 0 it will be visible-->
+        menuIcon.style.display = "none"; // Hide the hamburger menu
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";  
+        menuIcon.style.display = "block"; // Show the hamburger menu
+    }
+    
+</script>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby0w0M-563DOyV94LfuMrFaASvNSlpPOiIr5V7xpJQ1obkmK9JRKM1ZkYj47ma5JN0LFA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
